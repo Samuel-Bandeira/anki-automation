@@ -1,10 +1,11 @@
 import React from "react";
-import { FieldValues, UseFormRegister } from "react-hook-form";
+import { UseFormRegister } from "react-hook-form";
+import { formValues } from "../interfaces/formValues";
 
 interface InputI {
   index: number;
   type: string;
-  register: UseFormRegister<FieldValues>;
+  register: UseFormRegister<formValues>;
 }
 
 const Input = ({ index, type, register }: InputI) => {
@@ -12,7 +13,7 @@ const Input = ({ index, type, register }: InputI) => {
     <input
       type={type}
       className="mb-2 border border-black"
-      {...register(`sentence-${String(index + 1).padStart(2, "0")}`)}
+      {...register(`sentences.${index}.text`)}
     />
   );
 };
