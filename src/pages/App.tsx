@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import Button from "./components/Button";
-import Input from "./components/Input";
+import Button from "../components/Button";
+import Input from "../components/Input";
 import { useFieldArray, useForm } from "react-hook-form";
-import { useOnSubmit } from "./hooks/useSubmit";
-import { formValues } from "./interfaces/formValues";
+import { useOnSubmit } from "../hooks/useSubmit";
+import { formValues } from "../interfaces/formValues";
 
 function App() {
   const { handleSubmit, register, control } = useForm<formValues>({
