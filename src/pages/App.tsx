@@ -15,6 +15,7 @@ function App() {
     name: "sentences",
     control,
   });
+
   const onSubmit = useOnSubmit();
   const onAppend = () => {
     append({
